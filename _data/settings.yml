@@ -109,5 +109,5 @@ disqus_identifier: # Add your shortname for Disqus Comment.
 
 
 #-------------------------------
-# Google Analytics
-google_analytics: # Add your GA Tracking Id
+# GoatCounter
+goatcounter: komikeros
