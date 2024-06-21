@@ -47,7 +47,26 @@
   }
 }
 
-.post__title,
+.post__title {
+  margin-bottom: 10px;
+  font-size: 34px;
+  display: inline;
+
+  @media (max-width: $desktop) {
+    margin-bottom: 20px;
+    font-size: 34px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 34px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 16px;
+    font-size: 30px;
+  }
+}
+
 .page__title {
   margin-bottom: 10px;
   font-size: 34px;
