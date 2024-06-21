@@ -47,10 +47,16 @@ tags_section:
   number_columns: 4 # You can specify the number of columns from 1-4 for large screen resolution. By default, the theme uses three columns grid.
   tags:
     - tag: "action"
-    - tag: "shopping"
-    - tag: "business"
-    - tag: "food"
-    - tag: "sport"
+    - tag: "comedy"
+    - tag: "experimental"
+    - tag: "fantasy"
+    - tag: "historical"
+    - tag: "romance"
+    - tag: "sci-fi"
+    - tag: "classic"
+    - tag: "indie"
+    - tag: "preview"
+    - tag: "queer"
 
 # You can add many tag sections to the homepage; each section will show the recent posts by the tag.
 
