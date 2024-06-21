@@ -7,6 +7,14 @@
   }
 }
 
+.post__bottom {
+  margin: 10px 0 20px;
+
+  @media (max-width: $tablet) {
+    margin: 10px 0 20px;
+  }
+}
+
 .post__meta {
   display: inline-flex;
   align-items: center;
@@ -55,13 +63,13 @@
 
   @media (max-width: $mobile) {
     margin-bottom: 16px;
-    font-size: 24px;
+    font-size: 30px;
   }
 }
 
 .post__description,
 .page__description {
-  margin-bottom: 0;
+  margin-bottom: 15px;
   font-size: 18px;
   color: var(--text-alt-color);
 
