@@ -2,14 +2,12 @@
 
 <div class="widget-sidebar widget-post-comic">
 
-  {% if page.image %}
   <div class="post-comic-image">
     <img
       class="lazy" data-src="{{ site.s3_url }}/{{ page.series }}/meta/original.jpeg"
       alt="{{ page.title | escape }}"
     >
   </div>
-  {% endif %}
 
   {% if page.description %}
   <p class="post-comic-description">{{ page.description | markdownify | remove: '<p>' | remove: '</p>'}}</p>
