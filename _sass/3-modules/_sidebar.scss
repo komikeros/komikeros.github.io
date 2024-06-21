@@ -23,6 +23,10 @@
       margin-bottom: 0;
     }
 
+    .widget-post-comic {
+      margin-bottom: 0;
+    }
+
     .widget-featured-posts,
     .widget-tags {
       display: none;
@@ -31,7 +35,7 @@
 }
 
 
-// WIdget Post Author
+// Widget Post Author
 .widget-post-author {
   .post-author-image {
     position: relative;
@@ -105,9 +109,9 @@
   }
 
   @media (max-width: $desktop) {
-    margin-top: 0px;
-    padding-top: 0px;
-    // border-top: 1px solid var(--border-color);
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border-color);
 
     .post-author-description {
       font-size: 16px;
@@ -115,7 +119,7 @@
   }
 
   @media (max-width: $mobile) {
-    margin-top: 0px;
+    margin-top: 48px;
   }
 }
 
@@ -213,5 +217,49 @@
     &:hover {
       background-color: var(--background-alt-color-2);
     }
+  }
+}
+
+// Widget Post Comic
+.widget-post-comic {
+  .post-comic-image {
+    position: relative;
+    transform: translate(0);
+    width: 128px;
+    height: 128px;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--background-alt-color);
+    transition: transform .3s ease;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      user-select: none;
+    }
+  }
+
+  .post-comic-description {
+    margin-bottom: 0;
+    font-size: 15px;
+    color: var(--text-alt-color);
+  }
+
+  @media (max-width: $desktop) {
+    margin-top: 0px;
+    padding-top: 0px;
+
+    .post-comic-description {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    margin-top: 0px;
   }
 }

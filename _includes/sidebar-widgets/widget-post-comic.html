@@ -1,0 +1,16 @@
+<!-- begin widget post comic -->
+
+<div class="widget-sidebar widget-post-comic">
+
+  {% if page.image %}
+  <div class="post-comic-image">
+    <img class="lazy" data-src="{{ page.image }}" alt="{{ page.title | escape }}">
+  </div>
+  {% endif %}
+
+  {% if page.description %}
+  <p class="post-comic-description">{{ page.description }}</p>
+  {% endif %}
+</div>
+
+<!-- end widget post comic -->
