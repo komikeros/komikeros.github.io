@@ -22,7 +22,7 @@ paginate_path: "/latest/page/:num"
 collections:
   pages:
     output: true
-    permalink: /:name
+    permalink: /:path
   posts:
     output: true
     permalink: /:slug
