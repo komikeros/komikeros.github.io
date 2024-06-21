@@ -11,20 +11,14 @@ color_scheme: auto # You can choose three modes auto, light, and dark. By defaul
 # Navigation Settings
 menu_settings:
   menu_items:
-    - title: "Home"
-      url: "/"
     - title: "Latest"
       url: "/latest/"
     - title: "Authors"
       url: "/authors/"
-    - title: "Videos"
-      url: "/videos/"
     - title: "Pages"
       submenu:
       - url: "/about/"
         title: "About"
-      - url: "/elements/"
-        title: "Elements"
       - url: "/contact/"
         title: "Contact"
       - url: "/featured/"
