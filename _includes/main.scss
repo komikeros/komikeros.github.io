@@ -6,7 +6,8 @@
 :: Template name: Danto
 :: Danto is a fast, modern, optimized, and mobile-friendly Jekyll theme. It is fully compatible with GitHub Pages, supports videos from YouTube and Vimeo, and also has a light and dark mode. This theme has been designed with a focus on readability to provide your visitors with a quality user experience and is perfect for a personal blog, news, magazine, and all kinds of publishing websites.
 :: Template Author: Artem Sheludko
-:: Version: 1.0
+:: Customized by: Scott Lee Chua
+:: Version: 1.1
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -33,6 +34,7 @@
     3.11-Sidebar
     3.12-Scroll Button Top
     3.13-Buttons
+    3.14-Comic (ADDED)
 :: 4-Layouts
     4.1-Post Page
     4.2-Authors
@@ -99,6 +101,8 @@
 @import '3-modules/scroll-button-top';
 /* >>>>>>>>>>>>>> :: 3.13-Buttons <<<<<<<<<<<<<<< */
 @import '3-modules/buttons';
+/* >>>>>>>>>>>>>> :: 3.14-Comic <<<<<<<<<<<<<<< */
+@import '3-modules/comic';
 
 
 /* =======================
