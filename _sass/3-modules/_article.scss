@@ -41,27 +41,29 @@
   &:hover {
     transform: translateY(-3px);
 
-    .video-icon {
-      transform: translate(-50%, -50%) scale(1.1);
-    }
+    // .video-icon {
+    //   transform: translate(-50%, -50%) scale(1.1);
+    // }
   }
 }
 
 .article__image {
   position: relative;
-  transform: translate(0);
+  max-width:50%;
+  // transform: translate(0);
   display: block;
   margin-bottom: 20px;
   aspect-ratio: 1/1;
   border-radius: 22px;
   outline: none;
   overflow: hidden;
-  background: var(--background-alt-color);
+  // background: var(--background-alt-color);
 
   img {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    // width: 75%;
+    // max-width:200px;
+    // height: 100%;
     object-fit: cover;
     user-select: none;
   }
@@ -107,7 +109,7 @@
   align-items: center;
   flex-wrap: wrap;
   margin-top: -3px;
-  margin-bottom: -3px;
+  margin-bottom: 3px;
 }
 
 .article__tags {
