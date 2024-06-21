@@ -17,7 +17,7 @@
   }
 
   @media (max-width: $desktop) {
-    order: 1;
+    // order: 1; -- so that sidebar goes on top of the content
 
     .widget-post-author {
       margin-bottom: 0;
@@ -105,9 +105,9 @@
   }
 
   @media (max-width: $desktop) {
-    margin-top: 64px;
-    padding-top: 32px;
-    border-top: 1px solid var(--border-color);
+    margin-top: 0px;
+    padding-top: 0px;
+    // border-top: 1px solid var(--border-color);
 
     .post-author-description {
       font-size: 16px;
@@ -115,7 +115,7 @@
   }
 
   @media (max-width: $mobile) {
-    margin-top: 48px;
+    margin-top: 15px;
   }
 }
 
