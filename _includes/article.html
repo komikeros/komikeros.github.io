@@ -2,17 +2,9 @@
   <div class="article__inner">
 
     <div class="article__head">
-      {% if post.image and post.video_embed %}
-      <div class="video-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-          <polygon points="40,30 70,50 40,70"></polygon>
-        </svg>
-      </div>
-      {% endif %}
-
       {% if post.image %}
       <a href="{{ post.url | prepend: site.baseurl }}" class="article__image" aria-hidden="true" tabindex="-1">
-        <img class="lazy" data-src="{{site.baseurl}}{{post.image}}" alt="{{post.title}}">
+        <img class="lazy" data-src="{{ site.s3_url }}/{{ post.series }}/meta/square.jpeg" alt="{{post.title}}">
       </a>
       {% endif %}
     </div>
@@ -30,20 +22,29 @@
         <!-- <span class="article__date">•<time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%d %-b, %Y" %}{{ post.date | date: date_format }}</time></span> -->
       </div>
 
-      <h2 class="article__title">
+      <h2 class="article__title" style="display: inline;">
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>
+      <span>
+        {% if post.year_end == "ongoing" %}
+        <span>({{ post.year_start }}–)</span>
+        {% elsif post.year_end %}
+        <span>({{ post.year_start }}–{{ post.year_end }})</span>
+        {% else %}
+        <span>({{ post.year_start }})</span>
+        {% endif %}
+      </span>
 
-      {% if include.description == true %}
+      <!-- {% if include.description == true %}
       <p class="article__excerpt">{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | truncate: 250 }}{% endif %}</p>
-      {% endif %}
+      {% endif %} -->
 
-      <div class="article__info">
+      <!-- <div class="article__info">
         {% assign author = site.authors | where: 'username', post.author | first %}
         {% if author %}
           By <a class="article__author__name" href="{{ author.url }}">{{ author.name }}</a>
         {% endif %}
-      </div>
+      </div> -->
 
     </div>
   </div>
