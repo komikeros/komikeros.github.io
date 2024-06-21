@@ -41,21 +41,21 @@
 
 .post__title,
 .page__title {
-  margin-bottom: 24px;
-  font-size: 60px;
+  margin-bottom: 20px;
+  font-size: 34px;
 
   @media (max-width: $desktop) {
     margin-bottom: 20px;
-    font-size: 48px;
+    font-size: 34px;
   }
 
   @media (max-width: $tablet) {
-    font-size: 35px;
+    font-size: 34px;
   }
 
   @media (max-width: $mobile) {
     margin-bottom: 16px;
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 
