@@ -23,7 +23,7 @@ layout: default
       {% for num in (1..count) %}
       <img
         src="{{ site.s3_url }}/{{ page.series }}/{{ page.issue_num }}/{{ num }}.jpeg"
-        alt="{{ page.series | capitalize }} {{ page.issue_name | capitalize }} {{ page.issue_num }} page {{ num }}"
+        alt="{{ page.series | capitalize }} issue {{ page.issue_num }} page {{ num }}"
       >
       {% endfor %}
       </br></br>
