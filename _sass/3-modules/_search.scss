@@ -138,8 +138,8 @@
     display: inline-block;
     margin-right: 16px;
     min-width: 100px;
-    height: 90px;
-    border-radius: 22px;
+    height: 100px;
+    border-radius: 10px;
     transition: transform .3s ease;
     will-change: transform;
     background-size: cover;
@@ -175,7 +175,7 @@
     text-underline-offset: 2px;
   }
 
-  .search-results-date {
+  .search-results-type {
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
