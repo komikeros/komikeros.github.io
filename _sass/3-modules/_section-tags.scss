@@ -1,5 +1,9 @@
 /* Section Tags */
 .section-tags {
+
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+
   @media (max-width: $desktop) {
     .row .col:last-child {
       flex-grow: 1;
