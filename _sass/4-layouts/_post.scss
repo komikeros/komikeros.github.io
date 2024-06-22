@@ -87,7 +87,9 @@
 }
 
 .post__description,
-.page__description {
+.page__description,
+.post__description a,
+.page__description a {
   margin-bottom: 15px;
   font-size: 18px;
   color: var(--text-alt-color);
