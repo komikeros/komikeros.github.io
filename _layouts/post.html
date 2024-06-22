@@ -16,7 +16,15 @@ layout: default
           <span>({{ page.year_start }})</span>
           {% endif %}
         </span>
-        <div class="post__description">author 1 | author 2 </div>
+        <div class="post__description">
+          {% for a in page.authors %}
+            {% assign author = site.authors | where: 'username', a | first %}
+            <a href="/{{ author.username }}">{{ author.name }}</a>
+            {% unless forloop.last %}
+             &middot;
+            {% endunless %}
+          {% endfor %}
+        </div>
       </div>
 
     </div>
