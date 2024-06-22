@@ -9,7 +9,9 @@ year_end: false
 issue_name: chapter
 authors: [ethanchua, scottleechua, princebunbuns, aaronfelizmenio, allentotingski, the_dojigiri, kodonemo, japmkl, brentsabas]
 tags: [sci-fi, historical]
-featured: false
+last_updated: 2024-06-21
+status: complete
+featured: true
 ---
 
 | {{ page.issue_name | capitalize }}| Date |
