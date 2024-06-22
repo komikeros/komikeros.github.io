@@ -9,7 +9,7 @@ year_end: false
 issue_name: chapter
 creators: [ethanchua, scottleechua, princebunbuns, aaronfelizmenio, allentotingski, the_dojigiri, kodonemo, japmkl, brentsabas]
 tags: [sci-fi, historical]
-last_updated: 2024-06-21
+last_updated: 2024-06-20
 status: complete
 featured: true
 ---
