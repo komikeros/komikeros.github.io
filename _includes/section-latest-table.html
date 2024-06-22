@@ -1,0 +1,39 @@
+<section class="section">
+    <div class="container">
+
+    <div class="section__info">
+        <div class="section__head">
+            <h2 class="section__title">Latest Comic Updates</h2>
+        </div>
+        </div>
+
+
+<table class="tg">
+    <!-- <thead>
+    <tr>
+      <th class="tg-0lax">Title</th>
+      <th class="tg-0lax">Date Uploaded</th>
+    </tr>
+    </thead> -->
+  <tbody>
+    {% for post in site.posts limit:10 %}
+        <tr>
+            <td>
+                <div class="latest-table-comic-image">
+                    <a href="/{{ post.series }}">
+                        <img
+                      class="lazy" data-src="{{ site.s3_url }}/{{ post.series }}/meta/original.jpeg"
+                      alt="{{ page.title | escape }}"
+                        >
+                    </a>
+                  </div>                
+            </td>
+            <td><a href="/{{ post.series }}"><h3 class="latest-table-entry-title">{{ post.title }}</h3></a></br>{{ post.last_updated | date: "%d %-b %Y" }} ({{ post.status }})</td>
+        </tr>
+    {% endfor %}
+  </tbody>
+  </table>
+
+</div>
+
+</section>

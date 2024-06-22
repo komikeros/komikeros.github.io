@@ -8,3 +8,23 @@
     border-radius: 10px !important;
     margin-bottom: 1rem !important;
 }
+
+.latest-table-comic-image {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    text-align: center;
+
+    img {
+      top: 0;
+      left: 0;
+      max-width: 100px;
+      object-fit: cover;
+      border-radius: 5%;
+    }
+  }
+
+  .latest-table-entry-title {
+    display: inline;
+  }
