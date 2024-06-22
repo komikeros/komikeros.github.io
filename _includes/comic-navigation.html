@@ -1,6 +1,8 @@
 <p class="comic-navigation">
-    <a href="/{{ page.series }}/{{ page.issue_num | minus:1 }}">Prev</a>
-     . <a href="/{{ page.series }}">Menu</a>
+    {% unless page.issue_num == 1 %}
+    <a href="/{{ page.series }}/{{ page.issue_num | minus:1 }}">Prev</a> . 
+    {% endunless %}
+    <a href="/{{ page.series }}">Menu</a>
     {% unless page.last %}
      . <a href="/{{ page.series }}/{{ page.issue_num | plus:1 }}">Next</a>
     {% endunless %}
