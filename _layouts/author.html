@@ -9,7 +9,7 @@ layout: default
     {% assign post_count = site.posts | where_exp: "post", "post.authors contains page.username" %}
 
     <div class="author__content">
-      <div class="author__image"><img class="lazy" data-src="{{ page.image }}" alt="{{ page.name }}"></div>
+      <div class="author__image"><img class="lazy" data-src="{{ site.s3_url }}/authors/{{ page.username }}.jpeg" alt="Photo of {{ page.name }}"></div>
       <h1 class="author__name">{{ page.name }}</h1>
 
       <div class="author__info">
@@ -17,16 +17,16 @@ layout: default
         <span class="author__social__item"><i class="ion ion-md-pin"></i> {{ page.location }}</span>
       {% endif %}
       {% if page.website %}
-        <a class="author__social__item" href="{{ page.website }}" aria-label="Website link"><i class="ion ion-ios-link"></i> Website</a>
+        <a class="author__social__item" href="{{ page.website }}" aria-label="Website link" target="_blank"><i class="ion ion-ios-link"></i> Website</a>
       {% endif %}
       {% if page.facebook %}
-        <a class="author__social__item" href="{{ page.facebook }}" aria-label="Facebook link"><i class="ion ion-logo-facebook"></i> Facebook</a>
+        <a class="author__social__item" href="{{ page.facebook }}" aria-label="Facebook link" target="_blank"><i class="ion ion-logo-facebook"></i> Facebook</a>
       {% endif %}
       {% if page.instagram %}
-        <a class="author__social__item" href="{{ page.instagram }}" aria-label="Instagram link"><i class="ion ion-logo-instagram"></i> Instagram</a>
+        <a class="author__social__item" href="{{ page.instagram }}" aria-label="Instagram link" target="_blank"><i class="ion ion-logo-instagram"></i> Instagram</a>
       {% endif %}
       {% if page.twitter %}
-        <a class="author__social__item" href="{{ page.twitter }}" aria-label="Twitter link"><i class="ion ion-logo-twitter"></i> Twitter</a>
+        <a class="author__social__item" href="{{ page.twitter }}" aria-label="Twitter link" target="_blank"><i class="ion ion-logo-twitter"></i> Twitter</a>
       {% endif %}
     </div>
 
