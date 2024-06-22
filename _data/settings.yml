@@ -11,8 +11,6 @@ color_scheme: auto # You can choose three modes auto, light, and dark. By defaul
 # Navigation Settings
 menu_settings:
   menu_items:
-    - title: "Latest"
-      url: "/latest/"
     - title: "Authors"
       url: "/authors/"
     - title: "Pages"
@@ -67,7 +65,7 @@ tags_section:
 # Authors Section Settings
 authors_section:
   enable: true
-  section_title: Komikeros
+  section_title: Creators
 
 
 #-------------------------------
