@@ -75,8 +75,8 @@ footer_description: A free public library for komiks.
 
 # Social Links
 social:
-- {icon: "twitter", link: "https://x.com/komikerosph"}
 - {icon: "instagram", link: "https://instagram.com/komikerosph"}
+- {icon: "twitter", link: "https://twitter.com/komikerosph"}
 
 # Example of adding a new link to the footer - {icon: "instagram", link: "https://instagram.com"}
 # Other icons can be found at https://ionicons.com/v4/
