@@ -1,7 +1,7 @@
 /* Footer */
 .footer__inner {
-  padding: 64px 0;
-  border-top: 1px solid var(--border-color);
+  padding: 40px 0;
+  // border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 
   .row .col {
@@ -284,7 +284,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding: 32px 0;
+  padding: 0 0 32px;
 
   @media (max-width: $tablet) {
     flex-direction: column;
