@@ -58,4 +58,4 @@ sass:
   style: compressed
 
 
-exclude: ['latest']
+exclude: ['extra']
