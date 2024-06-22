@@ -14,7 +14,7 @@ status: complete
 featured: true
 ---
 
-| {{ page.issue_name | capitalize }}| Date |
+| {{ page.issue_name | capitalize }}| Published |
 |:-:|:-:|
 | [Chapter 7](/{{ page.series }}/7) | Nov 2017 |
 | [Chapter 6](/{{ page.series }}/6) | Nov 2017 |
@@ -23,3 +23,7 @@ featured: true
 | [Chapter 3](/{{ page.series }}/3) | Nov 2017 |
 | [Chapter 2](/{{ page.series }}/2) | Nov 2017 |
 | [Chapter 1](/{{ page.series }}/1) | Nov 2017 |
+
+<p class="comic-last-updated">
+last updated: {{ page.last_updated | date: "%d %-b %Y" }}
+</p>
