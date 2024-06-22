@@ -2,11 +2,9 @@
   <div class="article__inner">
 
     <div class="article__head">
-      {% if post.image %}
       <a href="{{ post.url | prepend: site.baseurl }}" class="article__image" aria-hidden="true" tabindex="-1">
         <img class="lazy" data-src="{{ site.s3_url }}/{{ post.series }}/meta/square.jpeg" alt="{{post.title}}">
       </a>
-      {% endif %}
     </div>
 
     <div class="article__content">
