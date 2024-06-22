@@ -2,12 +2,12 @@
 layout: post
 title: Doorkeeper
 description: |-
-    An immortal being. Six individuals, trapped by fate. All of time and space.
+    Doorkeeper has lived for an eternity and more, the unyielding guardian of the Ways of time and space. His task: to reveal to mortals the consequences of their choices. He does not interfere. But perhaps even the oldest beings can change...
 series: doorkeeper
 year_start: 2017
 year_end: false
 issue_name: chapter
-author: admin
+authors: [ethanchua, scottleechua, princebunbuns, aaronfelizmenio, allentotingski, the_dojigiri, kodonemo, japmkl, brentsabas]
 tags: [sci-fi, historical]
 featured: false
 ---
