@@ -19,7 +19,7 @@ permalink: /authors/
         {% assign post_count = site.posts | where_exp: "post", "post.authors contains author.username" %}
         <div class="col col-3 col-w-6 col-t-12 animate">
           <div class="authors__info">
-            <a class="authors__image" href="{{ author.url }}"><img class="lazy" data-src="{{ author.image }}" alt="{{ author.name }}"></a>
+            <a class="authors__image" href="{{ author.url }}"><img class="lazy" data-src="{{ site.s3_url }}/authors/{{ author.username }}.jpeg" alt="Photo of {{ author.name }}"></a>
             <div class="authors__meta">
               <h2 class="authors__name"><a class="authors__link" href="{{ author.url }}">{{ author.name }}</a></h2>
               {% if post_count.size >= 1 %}
