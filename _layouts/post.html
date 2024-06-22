@@ -19,7 +19,7 @@ layout: default
         <div class="post__description">
           {% for a in page.authors %}
             {% assign author = site.authors | where: 'username', a | first %}
-            <a href="/{{ author.username }}">{{ author.name }}</a>
+            <a href="/{{ author.username }}">{{ author.name | escape }}</a>
             {% unless forloop.last %}
              &middot;
             {% endunless %}

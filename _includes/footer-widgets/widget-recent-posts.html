@@ -30,7 +30,7 @@
         <div class="article__info">
           {% assign author = site.authors | where: 'username', post.author | first %}
           {% if author %}
-            By <a class="article__author__name" href="{{ author.url }}">{{ author.name }}</a>
+            By <a class="article__author__name" href="{{ author.url }}">{{ author.name | escape }}</a>
           {% endif %}
         </div>
 
