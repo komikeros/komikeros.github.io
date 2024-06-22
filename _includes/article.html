@@ -24,10 +24,10 @@
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>
       <span>
-        {% if post.year_end == "ongoing" %}
-        <span>({{ post.year_start }}–)</span>
-        {% elsif post.year_end %}
+        {% if post.year_end %}
         <span>({{ post.year_start }}–{{ post.year_end }})</span>
+        {% elsif post.ongoing %}
+        <span>({{ post.year_start }}–)</span>
         {% else %}
         <span>({{ post.year_start }})</span>
         {% endif %}
