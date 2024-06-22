@@ -87,15 +87,22 @@
 }
 
 .post__description,
-.page__description,
-.post__description a,
-.page__description a {
+.page__description {
   margin-bottom: 15px;
   font-size: 18px;
   color: var(--text-alt-color);
 
   @media (max-width: $mobile) {
     font-size: 16px;
+  }
+}
+
+.post__description a,
+.page__description a {
+  color: var(--text-alt-color);
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 
