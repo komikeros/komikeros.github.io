@@ -17,6 +17,7 @@
 {% endif %}
 
 {% for tag_word in site.data.settings.tags_section.tags %}
+{% if site.tags.[tag_word.tag].size > 0 %}
 <!-- begin section-tag -->
 <section class="section section-tags animate">
   <div class="container">
@@ -50,6 +51,7 @@
   </div>
 </section>
 <!-- end section-tag -->
+{% endif %}
 {% endfor %}
 
 {% endif %}
