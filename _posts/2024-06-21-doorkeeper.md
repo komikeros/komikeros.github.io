@@ -25,5 +25,5 @@ featured: true
 | [Chapter 1](/{{ page.series }}/1) | Nov 2017 |
 
 <p class="comic-last-updated">
-last updated: {{ page.last_updated | date: "%d %-b %Y" }}
+updated: {{ page.last_updated | date: "%d %-b %Y" }}
 </p>
