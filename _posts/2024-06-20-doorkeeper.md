@@ -11,7 +11,7 @@ creators: [ethanchua, scottleechua, princebunbuns, aaronfelizmenio, allentotings
 tags: [sci-fi, historical]
 last_updated: 2024-06-20
 status: complete
-featured: true
+featured: false
 ---
 
 | {{ page.issue_name | capitalize }}| Published |
