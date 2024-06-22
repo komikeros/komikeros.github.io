@@ -47,6 +47,9 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      year_end: false
+      ongoing: false
+      feature: false
   - scope:
       path: ""
       type: "authors"

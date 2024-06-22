@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Doorkeeper
 description: |-
     Doorkeeper has lived for an eternity and more, the unyielding guardian of the Ways of time and space. His task: to reveal to mortals the consequences of their choices. He does not interfere. But perhaps even the oldest beings can change...
@@ -9,8 +8,6 @@ year_end: false
 creators: [ethanchua, scottleechua, princebunbuns, aaronfelizmenio, allentotingski, the_dojigiri, kodonemo, japmkl, brentsabas]
 tags: [sci-fi, historical]
 last_updated: 2024-06-20
-status: complete
-featured: false
 ---
 
 | Chapter | Published |
