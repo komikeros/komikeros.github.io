@@ -15,7 +15,8 @@ permalink: /creators
       </div>
 
       <div class="row">
-        {% for author in site.authors %}
+        {% assign sorted_authors = site.authors | sort: 'name' %}
+        {% for author in sorted_authors %}
         {% assign post_count = site.posts | where_exp: "post", "post.creators contains author.username" %}
         <div class="col col-3 col-w-6 col-t-12 animate">
           <div class="authors__info">
