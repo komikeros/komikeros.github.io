@@ -28,7 +28,7 @@
                     </a>
                   </div>                
             </td>
-            <td><a href="/{{ post.series }}"><h3 class="latest-table-entry-title">{{ post.title }}</h3></a></br>{{ post.last_updated | date: "%d %-b %Y" }} ({{ post.status }})</td>
+            <td><a href="/{{ post.series }}"><h3 class="latest-table-entry-title">{{ post.title }}</h3></a></br>{{ post.last_updated | date: "%d %-b %Y" }} - {{ post.status }}</td>
         </tr>
     {% endfor %}
   </tbody>
