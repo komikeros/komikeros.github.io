@@ -7,14 +7,7 @@
       {% if post.image %}
       <div class="article__head">
         <a href="{{ post.url | prepend: site.baseurl }}" class="recent-posts__image" aria-hidden="true" tabindex="-1">
-          {% if post.image and post.video_embed %}
-          <div class="video-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-              <polygon points="40,30 70,50 40,70"></polygon>
-            </svg>
-          </div>
-          {% endif %}
-          <img class="lazy" data-src="{{site.baseurl}}{{post.image}}" alt="{{post.title}}">
+          <img class="lazy" data-src="{{ site.s3_url }}/{{ post.series }}/meta/square.jpeg" alt="{{post.title}}">
         </a>
       </div>
       {% endif %}
