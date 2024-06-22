@@ -17,7 +17,7 @@ layout: default
           {% endif %}
         </span>
         <div class="post__description">
-          {% for a in page.authors %}
+          {% for a in page.creators %}
             {% assign author = site.authors | where: 'username', a | first %}
             <a href="/{{ author.username }}">{{ author.name | escape }}</a>
             {% unless forloop.last %}
