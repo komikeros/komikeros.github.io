@@ -6,7 +6,6 @@ description: |-
 series: doorkeeper
 year_start: 2017
 year_end: false
-issue_name: chapter
 creators: [ethanchua, scottleechua, princebunbuns, aaronfelizmenio, allentotingski, the_dojigiri, kodonemo, japmkl, brentsabas]
 tags: [sci-fi, historical]
 last_updated: 2024-06-20
@@ -14,7 +13,7 @@ status: complete
 featured: false
 ---
 
-| {{ page.issue_name | capitalize }}| Published |
+| Chapter | Published |
 |:-:|:-:|
 | [Chapter 7](/{{ page.series }}/7) | Nov 2017 |
 | [Chapter 6](/{{ page.series }}/6) | Nov 2017 |
