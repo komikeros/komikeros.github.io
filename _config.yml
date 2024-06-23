@@ -28,7 +28,7 @@ collections:
     permalink: /:slug
   authors:
     output: true
-    permalink: /:name
+    permalink: /creators/:name
 
 # Pages Path
 defaults:
