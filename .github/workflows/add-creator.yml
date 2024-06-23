@@ -1,0 +1,67 @@
+name: Add Creator
+
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        description: username
+        required: true
+      name:
+        description: display name
+        required: true
+      website:
+        description: website
+        required: false
+        default: ""
+      facebook:
+        description: Facebook URL
+        required: false
+        default: ""
+      instagram:
+        description: Instagram URL
+        required: false
+        default: ""
+      twitter:
+        description: Twitter URL
+        required: false
+        default: ""
+      description:
+        description: bio
+        required: false
+        default: ""
+
+jobs:
+  add-creator:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Create page template
+        run: cp ./templates/template-creator.md ./_authors/${{ inputs.username }}.md
+      - name: Fill in template
+        run: |
+          sed -i "s%<username>%${{ inputs.username }}%" ./_authors/${{ inputs.username }}.md
+          sed -i "s%<name>%${{ inputs.name }}%" ./_authors/${{ inputs.username }}.md
+          sed -i "s%<website>%${{ inputs.website }}%" ./_authors/${{ inputs.username }}.md
+          sed -i "s%<facebook>%${{ inputs.facebook }}%" ./_authors/${{ inputs.username }}.md
+          sed -i "s%<instagram>%${{ inputs.instagram }}%" ./_authors/${{ inputs.username }}.md
+          sed -i "s%<twitter>%${{ inputs.twitter }}%" ./_authors/${{ inputs.username }}.md
+          sed -i "s%<description>%${{ inputs.description }}%" ./_authors/${{ inputs.username }}.md
+      - name: Open PR
+        id: opr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: creator/${{ inputs.username }}
+          title: "Add Creator: ${{ inputs.name }} (${{ inputs.username }})"
+          body: |
+            Username: ${{ inputs.username }}
+            Name: ${{ inputs.name }}
+            Website: ${{ inputs.website }}
+            Facebook: ${{ inputs.facebook }}
+            Instagram: ${{ inputs.instagram }}
+            Twitter: ${{ inputs.twitter }}
+            Bio: ${{ inputs.description }}
+      - name: Log link to PR
+        if: ${{ steps.opr.outputs.pull-request-number }}
+        run: |
+          echo "Pull Request #${{ steps.opr.outputs.pull-request-number }}: ${{ steps.opr.outputs.pull-request-url }}"
