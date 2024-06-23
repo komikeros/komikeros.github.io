@@ -62,4 +62,4 @@ sass:
   style: compressed
 
 
-exclude: ['extra']
+exclude: ['extra', 'templates']
