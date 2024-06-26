@@ -1,3 +1,8 @@
+---
+layout: none
+permalink: /robots.txt
+---
+
 User-agent: AdsBot-Google
 User-agent: Amazonbot
 User-agent: anthropic-ai
@@ -23,4 +28,4 @@ User-agent: PerplexityBot
 User-agent: YouBot
 Disallow: /
 
-Sitemap: https://komikeros.com/sitemap.xml
+Sitemap: {{ site.url }}/sitemap.xml
