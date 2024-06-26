@@ -2,7 +2,7 @@
   <div class="article__inner">
 
     <div class="article__head">
-      <a href="{{ post.url | prepend: site.baseurl }}" class="article__image" aria-hidden="true" tabindex="-1">
+      <a href="{{ post.url }}" class="article__image" aria-hidden="true" tabindex="-1">
         <img class="lazy" data-src="{{ site.s3_url }}/{{ post.series }}/meta/square.jpeg" alt="{{post.title}}">
       </a>
     </div>
@@ -13,7 +13,7 @@
         {% if post.tags.size >= 1 %}
         <div class="article__tags">
         {% for tag in post.tags %}
-          <a href="{{ site.baseurl }}/tag-search/?tag={{ tag | downcase | url_encode }}" class="article__tag">{{ tag }}</a>
+          <a href="/tag-search/?tag={{ tag | downcase | url_encode }}" class="article__tag">{{ tag }}</a>
         {% endfor %}
         </div>
         {% endif %}
@@ -21,7 +21,7 @@
       </div>
 
       <h2 class="article__title" style="display: inline;">
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a href="{{ post.url }}">{{ post.title }}</a>
       </h2>
       <span>
         {% if post.year_end %}

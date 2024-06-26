@@ -1,6 +1,5 @@
 #-------------------------------
 # General Site Settings
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://komikeros.com" # the base hostname & protocol for your site, e.g. http://example.com
 s3_url: "https://dip7ok9f0gqax.cloudfront.net"
 
