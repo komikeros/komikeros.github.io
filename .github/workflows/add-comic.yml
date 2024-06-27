@@ -1,0 +1,101 @@
+name: Add Comic
+
+on:
+  workflow_dispatch:
+    inputs:
+      series:
+        description: series key
+        required: true
+      title:
+        description: display title
+        required: true
+      description:
+        description: logline
+        required: true
+      num_issues:
+        description: number of issues to generate
+        required: true
+      issue_page_counts:
+        description: list of page counts per issue
+        required: true
+      year_start:
+        description: year published
+        required: true
+        type: number
+      year_end:
+        description: year finished
+        required: false
+        default: 'false'
+      creators:
+        description: list of creator usernames
+        required: true
+      tags:
+        description: list of tags
+        required: true
+      ongoing:
+        description: true if ongoing
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  add-comic:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Create comic summary
+        run: cp ./templates/template-comic-summary.md ./_posts/$(date +'%Y-%m-%d')-${{ inputs.series }}.md
+      - name: Fill in comic summary template
+        run: |
+          sed -i "s%<title>%${{ inputs.title }}%" ./_posts/${{ inputs.series }}.md
+          sed -i "s%<description>%${{ inputs.description }}%" ./_posts/${{ inputs.series }}.md
+          sed -i "s%<series>%${{ inputs.series }}%" ./_posts/${{ inputs.series }}.md
+          sed -i "s%<year_start>%${{ inputs.year_start }}%" ./_posts/${{ inputs.series }}.md
+          sed -i "s%<year_end>%${{ inputs.year_end }}%" ./_posts/${{ inputs.series }}.md
+          sed -i "s%<creators>%${{ inputs.creators }}%" ./_posts/${{ inputs.series }}.md
+          sed -i "s%<tags>%${{ inputs.tags }}%" ./_posts/${{ inputs.series }}.md
+          sed -i "s%<last_updated>%$(date +'%Y-%m-%d')%" ./_posts/${{ inputs.series }}.md
+          sed -i "s%<ongoing>%${{ inputs.ongoing }}%" ./_posts/${{ inputs.series }}.md
+      - name: Create comic directory
+        run: mkdir ./_pages/${{ inputs.series }}
+      - name: Create comic pages
+        run: for i in {1..${{ inputs.num_issues }}}; do cp ./templates/template-comic-page.md ./_pages/${{ inputs.series }}/$i.md; done
+      - name: Fill in comic pages
+        run: |
+          pagecount_arr=${{ inputs.issue_page_counts }}
+          for i in {1..${{ inputs.num_issues }}}
+          do
+            sed -i "s%<title>%${{ inputs.title }}%" ./_pages/${{ inputs.series }}/$i.md
+            sed -i "s%<series>%${{ inputs.series }}%" ./_pages/${{ inputs.series }}/$i.md
+            sed -i "s%<issue_num>%$i%" ./_pages/${{ inputs.series }}/$i.md
+            zero_indexed_i=$((i - 1))
+            sed -i "s%<page_count>%${pagecount_arr[$zero_indexed_i]}%" ./_pages/${{ inputs.series }}/$i.md
+            if [[ $i -eq ${{ inputs.num_issues }} ]]
+            then
+              sed -i "s%<last>%true%" ./_pages/${{ inputs.series }}/$i.md
+            else
+              sed -i "s%<last>%false%" ./_pages/${{ inputs.series }}/$i.md
+            fi
+          done
+      - name: Open PR
+        id: opr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: creator/${{ inputs.series }}
+          title: "Add Comic: ${{ inputs.title }} (${{ inputs.series }})"
+          body: |
+            Series key: ${{ inputs.series }}
+            Title: ${{ inputs.title }}
+            Description: ${{ inputs.description }}
+            No. of issues: ${{ inputs.num_issues }}
+            Page counts: ${{ inputs.issue_page_counts }}
+            Year start: ${{ inputs.year_start }}
+            Year end: ${{ inputs.year_end }}
+            Creators: ${{ inputs.creators }}
+            Tags: ${{ inputs.tags }}
+            Ongoing: ${{ inputs.ongoing }}
+      - name: Log link to PR
+        if: ${{ steps.opr.outputs.pull-request-number }}
+        run: |
+          echo "Pull Request #${{ steps.opr.outputs.pull-request-number }}: ${{ steps.opr.outputs.pull-request-url }}"
