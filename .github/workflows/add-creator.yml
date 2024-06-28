@@ -25,7 +25,7 @@ on:
         description: Twitter URL
         required: false
         default: ""
-      description:
+      bio:
         description: bio
         required: false
         default: ""
@@ -46,7 +46,7 @@ jobs:
           sed -i "s%<facebook>%${{ inputs.facebook }}%" ./_authors/${{ inputs.username }}.md
           sed -i "s%<instagram>%${{ inputs.instagram }}%" ./_authors/${{ inputs.username }}.md
           sed -i "s%<twitter>%${{ inputs.twitter }}%" ./_authors/${{ inputs.username }}.md
-          sed -i "s%<description>%${{ inputs.description }}%" ./_authors/${{ inputs.username }}.md
+          sed -i "s%<bio>%${{ inputs.bio }}%" ./_authors/${{ inputs.username }}.md
       - name: Open PR
         id: opr
         uses: peter-evans/create-pull-request@v6
@@ -60,7 +60,7 @@ jobs:
             Facebook: ${{ inputs.facebook }}
             Instagram: ${{ inputs.instagram }}
             Twitter: ${{ inputs.twitter }}
-            Bio: ${{ inputs.description }}
+            Bio: ${{ inputs.bio }}
       - name: Log link to PR
         if: ${{ steps.opr.outputs.pull-request-number }}
         run: |
