@@ -12,7 +12,7 @@ last_updated: 2024-06-29
 ongoing: false
 ---
 
-| [Chapter 1](/{{ page.series }}/1) | 2021 |
+| [Chapter 1 (Preview)](/{{ page.series }}/1) | 2021 |
 
 <p class="comic-last-updated">
 updated: {{ page.last_updated | date: "%d %-b %Y" }}
