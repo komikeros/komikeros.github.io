@@ -5,7 +5,7 @@ description: |-
 series: doorkeeper
 year_start: 2017
 year_end: false
-creators: [ethanchua, scottleechua, princebunbuns, aaronfelizmenio, allentotingski, the_dojigiri, kodonemo, japmkl, brentsabas]
+creators: [ethanchua, scottleechua, princebunbuns, aaronfelizmenio, allentotingski, the_dojigiri, kodonemo, japmkl, brentsabas, borgdraws]
 tags: [sci-fi, historical]
 last_updated: 2024-06-20
 ongoing: false
