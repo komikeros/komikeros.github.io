@@ -48,15 +48,15 @@ jobs:
         run: cp ./templates/template-comic-summary.md ./_posts/$(date +'%Y-%m-%d')-${{ inputs.series }}.md
       - name: Fill in comic summary template
         run: |
-          sed -i "s%<title>%${{ inputs.title }}%" ./_posts/${{ inputs.series }}.md
-          sed -i "s%<description>%${{ inputs.description }}%" ./_posts/${{ inputs.series }}.md
-          sed -i "s%<series>%${{ inputs.series }}%" ./_posts/${{ inputs.series }}.md
-          sed -i "s%<year_start>%${{ inputs.year_start }}%" ./_posts/${{ inputs.series }}.md
-          sed -i "s%<year_end>%${{ inputs.year_end }}%" ./_posts/${{ inputs.series }}.md
-          sed -i "s%<creators>%${{ inputs.creators }}%" ./_posts/${{ inputs.series }}.md
-          sed -i "s%<tags>%${{ inputs.tags }}%" ./_posts/${{ inputs.series }}.md
-          sed -i "s%<last_updated>%$(date +'%Y-%m-%d')%" ./_posts/${{ inputs.series }}.md
-          sed -i "s%<ongoing>%${{ inputs.ongoing }}%" ./_posts/${{ inputs.series }}.md
+          sed -i "s%<title>%${{ inputs.title }}%" ./_posts/$(date +'%Y-%m-%d')-${{ inputs.series }}.md
+          sed -i "s%<description>%${{ inputs.description }}%" ./_posts/$(date +'%Y-%m-%d')-${{ inputs.series }}.md
+          sed -i "s%<series>%${{ inputs.series }}%" ./_posts/$(date +'%Y-%m-%d')-${{ inputs.series }}.md
+          sed -i "s%<year_start>%${{ inputs.year_start }}%" ./_posts/$(date +'%Y-%m-%d')-${{ inputs.series }}.md
+          sed -i "s%<year_end>%${{ inputs.year_end }}%" ./_posts/$(date +'%Y-%m-%d')-${{ inputs.series }}.md
+          sed -i "s%<creators>%${{ inputs.creators }}%" ./_posts/$(date +'%Y-%m-%d')-${{ inputs.series }}.md
+          sed -i "s%<tags>%${{ inputs.tags }}%" ./_posts/$(date +'%Y-%m-%d')-${{ inputs.series }}.md
+          sed -i "s%<last_updated>%$(date +'%Y-%m-%d')%" ./_posts/$(date +'%Y-%m-%d')-${{ inputs.series }}.md
+          sed -i "s%<ongoing>%${{ inputs.ongoing }}%" ./_posts/$(date +'%Y-%m-%d')-${{ inputs.series }}.md
       - name: Create comic directory
         run: mkdir ./_pages/${{ inputs.series }}
       - name: Create comic pages
