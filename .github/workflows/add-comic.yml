@@ -82,7 +82,7 @@ jobs:
         id: opr
         uses: peter-evans/create-pull-request@v6
         with:
-          branch: creator/${{ inputs.series }}
+          branch: comic/${{ inputs.series }}
           title: "Add Comic: ${{ inputs.title }} (${{ inputs.series }})"
           body: |
             Series key: ${{ inputs.series }}
