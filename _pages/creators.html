@@ -28,7 +28,7 @@ permalink: /creators
               {% endif %}
             </div>
             {% if author.content %}
-            <p class="authors__description">{{ author.content }}</p>
+            <p class="authors__description">{{ author.content | truncatewords: 20 | markdownify | remove: '<p>' | remove: '</p>' }}</p>
             {% endif %}
           </div>
         </div>

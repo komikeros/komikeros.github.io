@@ -6,4 +6,4 @@ facebook: <facebook>
 instagram: <instagram>
 twitter: <twitter>
 ---
-<description>
+<bio>
