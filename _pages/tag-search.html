@@ -26,7 +26,8 @@ permalink: /tag-search/
 
       <div class="container animate">
         <div class="row">
-          {% for post in site.tags[this_word] %}
+          {% assign post_list = site.tags[this_word] | sort: 'last_updated' | reverse %}
+          {% for post in post_list %}
             {% if post.title != null %}
               <div class="col col-4 col-d-6 col-t-12">
                 {% include article.html %}
