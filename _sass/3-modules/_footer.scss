@@ -293,8 +293,31 @@
 }
 
 .footer__info__right {
+  margin-left: auto;
   display: flex;
   align-items: center;
+
+  @media (max-width: $tablet) {
+    margin-right: auto;
+  }
+}
+
+.bottom_nav {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+
+  a {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    color: var(--heading-font-color);
+
+    &:hover {
+      text-decoration-color: var(--heading-font-color);
+    }
+  }
 }
 
 .copyright {
@@ -312,6 +335,9 @@
     &:hover {
       text-decoration-color: var(--heading-font-color);
     }
+  }
+  @media (max-width: $tablet) {
+    margin-left: auto;
   }
 }
 
