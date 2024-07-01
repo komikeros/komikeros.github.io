@@ -1,7 +1,8 @@
 ---
 title: Sins of the Forefathers
 description: |-
-    Alex and his lola visit their ancestral home.
+    Alex and his lola go on a road trip.  
+    *First published in Homebound, a comic anthology by Ampersand and [UP Graphic](https://www.facebook.com/upgrphc).*
 series: sins-of-the-forefathers
 year_start: 2016
 year_end: false

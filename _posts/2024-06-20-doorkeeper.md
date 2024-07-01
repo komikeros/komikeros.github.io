@@ -1,7 +1,8 @@
 ---
 title: Doorkeeper
 description: |-
-    Doorkeeper has lived for an eternity and more, the unyielding guardian of the Ways of time and space. His task: to reveal to mortals the consequences of their choices. He does not interfere. But perhaps even the oldest beings can change...
+    An immortal being. Six individuals, trapped by fate. All of time and space.  
+    *First published by Summit Books.*
 series: doorkeeper
 year_start: 2017
 year_end: false
