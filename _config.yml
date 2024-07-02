@@ -41,6 +41,7 @@ defaults:
     values:
       layout: "comic"
       last: false
+      sitemap: false
   - scope:
       path: ""
       type: "posts"
